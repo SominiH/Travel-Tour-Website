@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore The World 🌍</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1 class="logo">Explore The World 🌍</h1>
+    <button id="darkModeToggle" class="dark-btn" type="button" aria-label="Toggle dark mode">
+        🌙
+    </button>
+</header>
+
+<section class="hero">
+    <h2>Your Dream Vacation Starts Here</h2>
+    <p>Discover amazing destinations at unbeatable prices.</p>
+</section>
+
+<section class="controls">
+    <label for="searchInput" class="visually-hidden">Search Packages</label>
+    <input type="text" id="searchInput" placeholder="Search destination...">
+
+    <label for="priceFilter" class="visually-hidden">Filter Packages by Price</label>
+    <select id="priceFilter" title="Filter Packages by Price">
+        <option value="all">All Prices</option>
+        <option value="low">Below ₹50,000</option>
+        <option value="mid">₹50,000 - ₹80,000</option>
+        <option value="high">Above ₹80,000</option>
+    </select>
+</section>
+
+<section>
+    <h2 class="section-title">Popular Packages</h2>
+    <div id="packageList" class="packages-container"></div>
+</section>
+
+<!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Book Your Trip</h2>
+        <form id="bookingForm">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+
+            <label for="packageSelect">Select Package</label>
+            <select id="packageSelect" title="Select Package" required>
+                <option value="">Select Package</option>
+            </select>
+
+            <label for="date">Travel Date</label>
+            <input type="date" id="date" required>
+
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </div>
+</div>
+
+<section>
+    <h2>Your Reservations</h2>
+    <div id="reservationList"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
